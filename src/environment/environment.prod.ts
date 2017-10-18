@@ -1,3 +1,3 @@
 export const environment = {
-  serviceURL: 'http://aws.url/compute/'
+  serviceURL: 'http://prime.dxcsprint.com:8081/store/'
 };
