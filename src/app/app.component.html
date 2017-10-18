@@ -1,0 +1,8 @@
+<h1>{{name}}</h1>
+<div>
+  <label>Please input prime number position: </label>
+  <input [(ngModel)]="inputParam.value" placeholder="ordinal position">
+  <button (click)="callService()" value="Submit">Submit</button>
+  <br/>
+  <label *ngIf="outputDisplay">Output is {{outputDisplay}}.</label>
+</div>

@@ -1,0 +1,34 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "awspoc"
+  },
+  "apps": [{
+    "root": "src",
+    "outDir": "dist",
+    "assets": [
+      "assets",
+      "favicon.ico"
+    ],
+    "index": "index.html",
+    "main": "main.ts",
+    "polyfills": "polyfills.ts",
+    "test": "test.ts",
+    "tsconfig": "tsconfig.json",
+    "prefix": "app",
+    "styles": [
+      "styles.css"
+    ]
+  }],
+  "lint": [{
+      "project": "src/tsconfig.json"
+    }
+  ],
+  "defaults": {
+    "styleExt": "less",
+    "component": {},
+    "serve": {
+      "port": 8081
+    }
+  }
+}
