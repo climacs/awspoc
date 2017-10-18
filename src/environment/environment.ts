@@ -1,3 +1,3 @@
 export const environment = {
-  serviceURL: 'http://localhost:8080/compute/'
+  serviceURL: 'http://prime.dxcsprint.com:8081/store/'
 };
