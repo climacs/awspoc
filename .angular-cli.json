@@ -18,7 +18,12 @@
     "prefix": "app",
     "styles": [
       "styles.css"
-    ]
+    ],
+    "environmentSource": "environments/environment.ts",
+    "environments": {
+      "prod": "environment/environment.prod.ts",
+      "dev": "environment/environment.dev.ts"
+    }
   }],
   "lint": [{
       "project": "src/tsconfig.json"

@@ -3,16 +3,18 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { Injectable } from '@angular/core';
 import { RestResponse } from '../model/RestResponse';
+import { environment } from '../../environment/environment';
 
 @Injectable()
 export class RestService {
-  private serviceUrl: String = 'http://localhost:8080/compute/'; // '../data/sample.json';
+  private serviceUrl: String = environment.serviceURL;
   constructor(private http: Http) { }
 
   public callService(callParameters: number): Observable<RestResponse> {
+    let finalURL = this.serviceUrl.indexOf('http') > -1 ? this.serviceUrl + ('' + callParameters) : this.serviceUrl;
     // todo use parameter in call
     let outputReponse = this.http
-      .get(`${this.serviceUrl}` + callParameters, {headers: this.getHeaders()})
+      .get(`${finalURL}`, {headers: this.getHeaders()})
       .map(mapRestResponse);
 
     return outputReponse;
